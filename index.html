@@ -16,13 +16,24 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="row col-12 justify-content-center">
-					<input class="col-5 btn btn-outline-danger p-3 m-3" onclick="hideText()"  name="" type="button" value="Masquer le texte !">
-					<input class="col-5 btn btn-outline-warning p-3 m-3" onclick="showText()" name="" type="button" value="Affichez le texte!">
+					<!-- <input class="col-5 btn btn-outline-danger p-3 m-3" onclick="hideText()"  name="" type="button" value="Masquer le texte !">
+					<input class="col-5 btn btn-outline-warning p-3 m-3" onclick="showText()" name="" type="button" value="Affichez le texte!"> -->
+					<!-- **************** ci-dessous correction Sandy ********************* -->
+					<input class="col-5 btn btn-outline-danger p-3 m-3" onclick="showAndHideText('coucou')"  name="" type="button" value="Masquer le texte !">
+					<input class="col-5 btn btn-outline-warning p-3 m-3" onclick="showAndHideText('hello')" name="" type="button" value="Affichez le texte!">
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="app.js" type="text/javascript">
+	<!-- <script src="app.js" type="text/javascript"></script> -->
+	<script type="text/javascript">
+	function showAndHideText(tutu) {
+		if (tutu == 'coucou') {
+			document.getElementById('text').style.visibility = 'hidden';
+		} else if (tutu == 'hello') {
+			document.getElementById('text').style.visibility = 'visible';
+		}
+	}
 	</script>
 </body>
 </html>
